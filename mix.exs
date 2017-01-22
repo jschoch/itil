@@ -7,6 +7,8 @@ defmodule Itil.Mixfile do
      elixir: "~> 1.4",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
+     package: package(),
+     description: description(),
      deps: deps()]
   end
 
@@ -28,6 +30,23 @@ defmodule Itil.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    []
+    [{:ex_doc, ">= 0.0.0", only: :dev}]
+  end
+
+  defp description do
+    """
+    lazy print and log functions and utils
+    """
+  end
+
+  defp package do
+    [# These are the default files included in the package
+     name: :itil,
+     files: ["lib", "mix.exs", "README*","LICENSE*"],
+     maintainers: ["Jesse Schoch"],
+     licenses: ["MIT"],
+     links: %{"GitHub" => "https://github.com/jschoch/itil",}
+      #"Docs" => "http://ericmj.github.io/postgrex/"}
+    ]
   end
 end
