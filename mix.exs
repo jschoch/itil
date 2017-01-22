@@ -55,19 +55,14 @@ defmodule Itil.Mixfile do
       :ok
 
 
-      iex> I.p "some term",[1,2,3]
-      "some term"
+      iex> I.p "s",[1,2,3]
+      "s"
       [1, 2, 3]
       :ok
 
+      iex> I.l "s", [1,2,4]
 
-      iex> I.l "sup"
-      10:47:53.389 [info]  "sup"
-      :ok
-
-      iex> I.l "some term", [1,2,4]
-
-      10:48:21.239 [info]  some term
+      10:48:21.239 [info]  s
 
       10:48:21.242 [info]  [1, 2, 4]
       :ok
