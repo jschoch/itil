@@ -26,6 +26,8 @@ defmodule I do
       iex> I.l "some term", [1,2,4]
       :ok
 
+      iex> I.ld "another term", %{a_map: :be_here}
+      :ok
   """
   def p(term) do
     IO.puts inspect( term, pretty: true)
@@ -39,6 +41,20 @@ defmodule I do
   end
   def l(string,term) when is_binary(string)do
     Logger.info string
+    l(term)
+  end 
+  def ld(term) do
+    Logger.debug inspect term, pretty: true
+  end
+  def ld(string,term) when is_binary(string) do
+    Logger.debug string
+    l(term)
+  end
+  def le(term) do
+    Logger.error inspect term, pretty: true
+  end
+  def le(string,term) when is_binary(string) do
+    Logger.error string
     l(term)
   end 
 end

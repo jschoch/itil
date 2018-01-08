@@ -3,6 +3,6 @@ defmodule ItilTest do
   doctest I
 
   test "the truth" do
-    assert 1 + 1 == 2
+    I.ld "debug", %{term: :term}
   end
 end
