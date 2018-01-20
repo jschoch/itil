@@ -50,6 +50,13 @@ defmodule I do
     Logger.debug string
     l(term)
   end
+  def lw(term) do
+    Logger.warn inspect term, pretty: true
+  end
+  def lw(string,term) when is_binary(string) do
+    Logger.warn string
+    l(term)
+  end
   def le(term) do
     Logger.error inspect term, pretty: true
   end
