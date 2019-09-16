@@ -3,7 +3,7 @@ defmodule Itil.Mixfile do
 
   def project do
     [app: :itil,
-     version: "0.1.2",
+     version: "0.1.4",
      elixir: "~> 1.0",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
